@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1767020450678,
+    "name": "Real User",
+    "email": "real@test.com",
+    "password": "$2b$10$EuNoiYL5kqFQQYXT/9GxM./icugaxUCfWXEXz7wNptppx/VLAHxze",
+    "role": "tenant"
+  }
+]

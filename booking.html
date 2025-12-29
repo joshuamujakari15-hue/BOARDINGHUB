@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a House</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.55);
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    /* Booking Card */
+    .booking-card {
+      background: #fff;
+      color: #333;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeUp 1s ease-in-out;
+    }
+
+    .booking-card h2 {
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      color: #2575fc;
+    }
+
+    .booking-card input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .booking-card input:focus {
+      border-color: #2575fc;
+      outline: none;
+      box-shadow: 0 0 6px rgba(37,117,252,0.4);
+    }
+
+    .booking-card button {
+      width: 100%;
+      padding: 0.9rem;
+      background: #2575fc;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .booking-card button:hover {
+      background: #1a5ed9;
+      transform: scale(1.03);
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #fff;
+      backdrop-filter: blur(4px);
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffae00;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+    <div class="booking-card">
+      <h2>Book a Boarding House</h2>
+      <form id="bookingForm">
+        <input type="text" id="listingId" placeholder="Listing ID" required>
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created by <strong>JoshWebs</strong> © 2025</p>
+    <p>Contact us: <a href="mailto:joshuamujakari15@gmail.com">joshuamujakari15@gmail.com</a></p>
+  </footer>
+
+  <script src="js/bookings.js"></script>
+</body>
+</html>

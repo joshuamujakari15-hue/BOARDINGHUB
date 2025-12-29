@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTExMVFRUXFxUVFRgYFRcXGBcXFxUXFxUVGBcYHSggGBolGxcVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKMBNgMBIgACEQEDEQH/...') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.55);
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    /* Dashboard Card */
+    .dashboard-card {
+      background: #fff;
+      color: #333;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeUp 1s ease-in-out;
+    }
+
+    .dashboard-card h2 {
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: #2575fc;
+    }
+
+    .dashboard-card p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #fff;
+      backdrop-filter: blur(4px);
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffae00;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+    <div class="dashboard-card">
+      <h2>Dashboard</h2>
+      <p id="welcome"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created by <strong>JoshWebs</strong> © 2025</p>
+    <p>Contact us: <a href="mailto:joshuamujakari15@gmail.com">joshuamujakari15@gmail.com</a></p>
+  </footer>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user) {
+      window.location.href = 'login.html';
+    } else {
+      document.getElementById('welcome').innerText =
+        `Welcome ${user.name} (${user.role})`;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boarding Hubb</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.55);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .btn {
+      background: #ffd700;
+      color: #000;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: #ffae00;
+    }
+
+    .btn.large {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .hero-content h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    /* Boxed Info Section */
+    .info-box {
+      background: rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .info-box h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: #ffd700;
+    }
+
+    .info-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      backdrop-filter: blur(4px);
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffae00;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <nav>
+      <h1>🏠 Boarding Hubb</h1>
+      <div>
+        <a href="login.html">Login</a>
+        <a class="btn" href="signup.html">Get Started</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h2>Find Safe & Affordable Boarding Houses</h2>
+        <p>Discover trusted accommodations tailored for students and young professionals. Boarding Hubb connects you with verified landlords, transparent reviews, and affordable housing options — making your search for a home away from home simple and secure.</p>
+        <a href="dashboard.html" class="btn large">Browse Listings</a>
+      </div>
+    </header>
+
+    <section class="info-box">
+      <h3>✨ Why Choose Boarding Hubb?</h3>
+      <p>✔ Verified and safe accommodations</p>
+      <p>✔ Affordable options tailored for students & professionals</p>
+      <p>✔ Easy-to-use dashboard to manage your bookings</p>
+      <p>✔ Community reviews to help you make the right choice</p>
+    </section>
+
+    <footer>
+      <p>Created by <strong>JoshWebs</strong> © 2025</p>
+      <p>Contact us: <a href="mailto:joshuamujakari15@gmail.com">joshuamujakari15@gmail.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
